@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/* CSS Document */
+
+*,*::before, *::after{
+	box-sizing: border-box;
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loading{
+	width: 100%;
+	height: 100vh;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #6093FF;
+}
+
+.loading-inner{
+	text-align: center;
+}
+
+.loading-inner img{
+	width:100px;
+}
+
+.loading-inner p{
+	color: #FFF;
+	font-size: 60px;
+	font-family: 'Bangers', cursive;
+
+} 
+.loading-inner span{
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+}
+
+.heart{
+	animation-name: loading_1;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-duration: 0.5s;
+}
+
+@keyframes loading_1{
+	0%{
+		transform: translate(0,0px);
+	}
+	
+	100%{
+		transform: translate(0,-10px);
+	}
+}
